@@ -64,3 +64,39 @@
     height: 45%;
     margin-bottom: 20px;
 }
+.content>div>div{
+    width: 50%;
+    border: 3px solid gray;
+    padding: 10px;
+    height: 90%;
+
+    margin: 10px;
+    border-radius: 0 50px;
+}
+.footer{
+    height: 50px;
+    background-color: #0000ff;
+    text-align: center;
+    color: yellow;
+    line-height: 50px;
+}
+.menu li{
+    background-color: darkcyan;
+}
+.menu a{
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+.menu a:hover{
+    background-color: cornflowerblue;
+}
+.menu li{
+    display: inline-block;
+    width: 120px;
+    position: relative;
+}
+.menu li .submenu{
+    display: none;
+    position: absolute;
+}
