@@ -33,7 +33,6 @@
     width: 15%;
     background-color: aquamarine;
 }
-
 .right{
     width: 15%;
     background-color: aquamarine;
@@ -111,6 +110,10 @@
 .menu li .submenu{
     display: none;
     position: absolute;
+}
+
+.menu li:hover .submenu{
+    display: block;
 }
 
 .banner h1{
