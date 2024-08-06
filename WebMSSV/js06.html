@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form đăng kí hội sigma</title>
 </head>
+    <style>
+    table,td{
+        border: 1px solid;
+    }
+    table{
+        border-collapse: collapse;
+        margin:auto;
+    }
+</style>
+
+<script>
+    function Dangky(){
+        var ten= document.forms.reg["txtTen"].value;
+        var mk= document.forms.reg["txtPass"].value;
+        var ns= document.forms.reg["txtNgaySinh"].value;
+        console.log(ns)
+        var ngaysinh = new Date(ns);
+        var ngayhientai= new Date();
+        var tuoi = ngayhientai.getFullYear() - ngaysinh.getFullYear();
+        var gt= document.forms.reg["gt"].value;
+        var qt= document.forms.reg["qt"].value;
+
+        document.forms.reg["thongtin"].value="Chào mừng " + ten + "\nBạn là " + gt + "\nMật khẩu của bạn có " + mk.length + "kí tự " <br> "tuổi bạn là " + tuoi + "\nVấn để bạn quan tâm là: " + qt;
+        return false;
+
+    }
+</script>
 <body>
     <form id="reg" onsubmit="return Dangky()">
         <table>
