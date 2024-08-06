@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương trình bậc 2</title>
+    <style>
+        table,
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            background-color: beige;
+        }
+
+        table{
+            margin: 0px auto;
+        }
+        td:nth-of-type(odd)
+        /* cột lẻ */
+        {
+            width: 50px;
+        }
+
+        p{
+            text-align: center;
+        }
+        td:nth-of-type(even)
+        /* cột chẵn */
+        {
+            width: 300px;
+        }
+
+        p{
+            text-align: center;
+        }
+    </style>
+    <script src="./JS/js03.js"></script>
+</head>
+<body>
+    <table>
+        <caption>
+            <b>CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH
+                <br>ax<sup>2</sup> + bx + c = 0
+            </b>
+        </caption>
+        <tr>
+            <td>a = </td>
+            <td><input type="text" id="a" size="10"></td>
+        </tr>
+        <tr>
+            <td>b = </td>
+            <td><input type="text" id="a" size="10"></td>
+        </tr>
+        <tr>
+            <td>c = </td>
+            <td><input type="text" id="a" size="10"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="PTB2()">Giải</button>
+                <button onclick="Xoa()">Xóa</button>
+            </td>
+        </tr>
+    </table>
+
+    <p id="ketqua"></p>
+</body>
+</html>
