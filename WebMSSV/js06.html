@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="reg" onsubmit="return Dangky()">
+        <table>
+            <caption><h2>ĐĂNG KÝ THÀNH VIÊN</h2></caption>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" name="txtTen" required></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td><input type="password" name="txtPass" required></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="date" name="txtNgaysinh" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gt" value="Nam" checked>Nam
+                    <input type="radio" name="gt" value="Nữ">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Vấn đề bạn quan tâm</td>
+                <td>
+                    <select name="qt">
+                        <option value="Kinh tế">Kinh tế</option>
+                        <option value="Thể thao">Thể thao</option>
+                        <option value="Văn học nghệ thuật">Văn hóa nghệ thuật</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Đăng ký">Đăng ký</td>
+                <td><input type="reset" value="Hủy">Hủy</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="thongtin" cols="50" rows="6"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
