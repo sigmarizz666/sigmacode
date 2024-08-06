@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <style>
+    table, td{
+        border: 1px solid;
+    }
+    table{
+        border-collapse: collapse;
+        width: 50%;
+        margin: auto;
+    }
+
+    td:first-child
+    {
+        width: 30%;
+    }
+</style>
+
+<script>
+    function Tinh(){
+        var a = parseInt(document.forms["myform"]["txtSo1"].value);
+        var a = parseInt(document.forms["myform"]["txtSo2"].value);
+        var op = document.forms["myform"]["op"].value;
+        var kq;
+        switch(op){
+            case "+" : kq = a +b; break;
+            case "-" : kq = a -b; break;
+            case "*" : kq = a *b; break;
+            case"/" :
+            if(b!=0){
+                kq=a/b;
+                kq=kq.toFixed(2);
+            }
+            else
+            kq="Không thể chia cho 0";
+            break;
+        }
+        document.forms["myform"]["kq"].value=kq;
+        return false;
+    }
+</script>
 <body>
     <form id="myform" onsubmit="return Tinh()">
         <table>
