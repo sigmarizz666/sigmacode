@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function taoMang()
+        {
+            var i;
+            var n = parseInt(document.getElementById("sopt").value);
+            arr = new Array(n); //Mảng toàn cục
+            for (i = 0; i < n; i++){
+                console.log(Math.random());
+                arr[i] = Math.floor(Math.random() * 100) % 50;
+
+            }
+            document.getElementById("txtArr1").value = arr.join(" ");
+        }
+        function tang(a, b){
+            return a - b;
+        }
+        function giam(a, b){
+            return b - a;
+        }
+        function mangTang(){
+            arr.sort(tang);
+            document.getElementById("txtArr2").value = arr.join(" ");
+        }
+        function mangGiam(){
+            arr.sort(giam);
+            document.getElementById("txtArr3").value = arr.join(" ");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
