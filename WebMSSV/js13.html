@@ -18,6 +18,41 @@
     </script>
 </head>
 <body>
+    <p>
+        <label for="txtData">Nhập các giá trị</label>
+        <input type="text" required id="txtData" value="20,50,70,80,40,30">
+        <button onclick="drawChart()">Draw Chart</button>
+    </p>
+    <canvas id="canvas"></canvas>
+<script>
+    function drawChart(){
+        var xValues=document.getElementById("txtData").value.split(",");
+        var yValues=[];
+        var barColors=[];
+        for(i=0; i<xValues.length; i++)
+        {
+            yValues[i]=Number(xValues[i]);
+            barColors[i]= "rgb(" + Math.floor(Math.random()*1000)%256+ "," + Math.floor(Math.random()*300)%256 + ", " + Math.floor(math.random()*300)%256+ ")";
+        }
+        new Chart("canvas", {
+            type:"pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+
+            },
+            options: {
+                title: {
+                    display:true,
+                    text: "Pie Chart"
+                }
+            }
+        });
+    }
+</script>
     
 </body>
 </html>
