@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thay đổi kích cỡ ảnh</title>
 </head>
+    <style>
+    .large{height: 384px; width: 512px}
+    .medium{height: 192px; width: 256px}
+    .large{height: 77px; width: 102px}
+</style>
+<script>
+    function setImgSize(value){
+        document.getElementById("image").className=value;
+    }
+</script>
 <body>
     <h1>Image Resizing</h1>
     <hr />
