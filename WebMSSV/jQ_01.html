@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery bài 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function insert(){
+            var mh = $("#txtMonhoc").val();
+            if(mh.trim() != "") {
+                var str = "<li>" + mh + "<li>";
+                $("ul").append(str);//thêm chuỗi str vào cuối nội dung trong <ul>
+            }
+            $("#txtMonhoc").val("");//làm rỗng textbox
+        }
+        $(document).ready(function(){
+            $("button").click(function(){
+                insert();
+            })
+            $("txtMonhoc").change(function(){
+                insert();
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>
+        <input type="text" id="txtMonhoc">
+    </p>
+    <ul>
+        <li>Python</li>
+        <li>PHP</li>
+    </ul>
+    <p>
+        <button>Thêm môn học</button>
+    </p>
+</body>
+</html>
