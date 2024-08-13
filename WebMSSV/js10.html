@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi màu</title>
+    <style>
+        div#divText{
+            width: 300px;
+            height: 200px;
+            background-color: #ff0000;
+            color: #ffff00;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function changeColor(){
+            var bkcolor = document.getElementById("bkcolor").value;
+            //console.log(bkcolor)
+            var textcolor = document.getElementById("textcolor").value;
+            //console.log(textcolor)
+            document.getElementById("title").innerHTML = document.getElementById("txtInput").value;
+            document.getElementById("divText").style.backgroundColor = bkcolor;
+            document.getElementById("divText").style.color = textcolor;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
