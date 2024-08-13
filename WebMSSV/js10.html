@@ -7,33 +7,32 @@
     <title>Thay đổi màu</title>
     <style>
         div#divText{
-            width: 500px;
+            width: 300px;
             height: 200px;
             background-color: #ff0000;
             color: #ffff00;
             text-align: center;
-            line-height: 200px;
         }
 
     </style>
     <script>
         function changeColor(){
             var bkcolor = document.getElementById("bkcolor").value;
-            console.log(bkcolor)
+            //console.log(bkcolor)
             var textcolor = document.getElementById("textcolor").value;
-            console.log(textcolor)
+            //console.log(textcolor)
             document.getElementById("title").innerHTML = document.getElementById("txtInput").value;
-            document.getElementById("divText").style.backgroundColor= bkcolor ;
-            document.getElementById("divText").style.color= textcolor ;
+            document.getElementById("divText").style.backgroundColor = bkcolor;
+            document.getElementById("divText").style.color = textcolor;
         }
     </script>
 </head>
 <body>
     <div id="divText">
-        <h1 id="'title">Welcome HTML5!</h1>
+        <h1 id="title">Welcome HTML</h1>
     </div>
     <p> Nhập nội dung:
-        <input type="text" id ="txtInput" autofocus value="Welcome HTML5!" size="50">
+        <input type="text" id ="txtInput" autofocus value="Welcome HTML" size="50">
     </p>
     <p>
         Màu nền: <input type="color" id="bkcolor" value="#ff0000">
@@ -41,6 +40,6 @@
     <p>
         Màu chữ: <input type="color" id="textcolor" value="#ffff00">
     </p>
-    <input type="button" onClick="changeColor()" value="Thực hiện">
+    <input type="button" onClick="changeColor()" value="Thực hiện" />
 </body>
 </html>
