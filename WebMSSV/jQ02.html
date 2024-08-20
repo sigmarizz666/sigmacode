@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQ02</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btTotal").click(function(){
+
+                var t1= $("#dayFrom").val();
+                var t2= $("#dayTo").val();
+                    d1=new Date(t1);
+                    d2 = new Date(t2);
+                    var songay=(d2.getTime()-d1.getTime())
+                    $("#result").html("<b>"+songay+"</b>");
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <table>
+        <caption>Tính số ngày giữa hai thời điểm</caption>
+        <tr>
+            <td>Từ ngày: </td>
+            <td><input type="date" id="dayFromm"</td>
+        </tr>
+
+        <tr>
+            <td>Đến ngày: </td>
+            <td><input type="date" id="dayTo"></td>
+        </tr>
+        <tr>
+            <td><button id="btTotal">Tính số ngày</button></td>
+            <td><span id="result"></span></td>
+        </tr>
+    </table>
+</body>
+</html>
