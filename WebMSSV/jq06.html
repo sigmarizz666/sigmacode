@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di chuyển vật thể</title>
+    <style>
+        div{
+            position: relative;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: red;
+        }
+    </style>
+    <script></script>
+    <script>
+        $(document).ready(function(){
+            $('#btnMoveRight').click(function(){
+                var left = $(window).width() = $("div").innerWidth();
+                $('div').animate({
+                    'left':left
+                }, 1000);
+            });
+            $('#btnMoveLeft').click(function(){
+                $('div').animate({
+                    'left':'0'
+                }, 1000);
+            });
+            $('#btnMoveUp').click(function(){
+                $('div').animate({
+                    'top':'0'
+                }, 1000);
+            });
+            $('#btnMoveDown').click(function(){
+                var top = $(window).height() - $("div").innerHeight();
+                $('div').animate({
+                    'top':top
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <input type="button" id="btnMoveRight" value="Move right">
+    <input type="button" id="btnMoveLeft" value="Move left">
+    <input type="button" id="btnMoveUp" value="Move up">
+    <input type="button" id="btnMoveDown" value="Move down">
+</body>
+</html>
